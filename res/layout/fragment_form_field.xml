@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ViewFlipper
+        android:id="@+id/view_flipper"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" >
+
+        <RelativeLayout
+            android:id="@+id/layout_form"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#CBC9CB" >
+
+            <TextView
+                android:id="@+id/txt_form_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="47dp"
+                android:text="So Tell Me, What are you doing right here, right now? "
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtbox_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_form_label"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="59dp"
+                android:inputType="textPersonName"
+                android:text="Please Enter Your Name Here" android:background="#FFFFFF"/>
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="79dp"
+                android:background="#000000"
+                android:minWidth="20dip"
+                android:text="Submit Your Answer"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/txtbox_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/btn_submit"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="72dp"
+                android:background="#FFFFFF"
+                android:inputType="textMultiLine"
+                android:minHeight="50dip" >
+
+                <requestFocus />
+            </EditText>
+
+        </RelativeLayout>
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/component_thank_you" />
+    </ViewFlipper>
+
+</RelativeLayout>

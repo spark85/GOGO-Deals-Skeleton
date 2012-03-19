@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
+   
+    android:id="@+id/view_flipper_drawer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#000000" >
+
+    <include
+        android:id="@+id/grid_first"
+        layout="@layout/grid_first" />
+
+    <include
+        android:id="@+id/grid_second"
+        layout="@layout/grid_second" />
+
+    <include
+        android:id="@+id/grid_third"
+        layout="@layout/grid_third" />
+
+</ViewFlipper>

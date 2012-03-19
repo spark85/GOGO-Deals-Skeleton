@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:my="http://schemas.android.com/apk/res/com.bnotions.gogodeals"
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/drawer" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/layout_filters"
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:background="#696969"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <ImageButton
+                android:id="@+id/imgbtn_left_filter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/left_btn"
+                android:contentDescription="left button" />
+
+            <ImageButton
+                android:id="@+id/imgbtn_middle_filter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/mid_btn"
+                android:contentDescription="middle button" />
+
+            <ImageButton
+                android:id="@+id/imgbtn_right_filter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/right_btn"
+                android:contentDescription="right button" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_filters"
+            android:orientation="vertical" >
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="0" />
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-4dip"
+                android:layout_weight="0"
+                android:orientation="horizontal" />
+        </LinearLayout>
+
+        <com.bnotions.gogodeals.obj.MultiDirectionSlidingDrawer
+            android:id="@+id/drawer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_filters"
+            my:content="@+id/content"
+            my:direction="topToBottom"
+            android:gravity="top"
+            my:handle="@+id/handle" >
+          	<include android:id="@+id/content"
+          	    layout="@layout/view_flipper" />
+            <ImageButton
+                android:id="@id/handle"
+                android:layout_width="wrap_content"
+                android:layout_height="0dip"
+                android:visibility="invisible"/>
+        </com.bnotions.gogodeals.obj.MultiDirectionSlidingDrawer>
+    </RelativeLayout>
+
+</TabHost>

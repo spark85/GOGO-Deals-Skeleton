@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_grid_third"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="3.0" >
+
+    <ImageButton
+        android:id="@+id/btn_second_1"
+        android:layout_height="wrap_content"
+        android:layout_width="0dip"
+        android:layout_weight="1.0"
+        android:background="@drawable/btn_third_grid_1_icon" />
+   
+ 
+</LinearLayout>
